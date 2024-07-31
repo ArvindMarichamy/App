@@ -1,0 +1,46 @@
+/* EventListings.css */
+.event-listings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+ 
+}
+
+.event-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: darkorange;
+  margin-top: 50px;
+}
+
+.event-image {
+  width: 100%;
+  height: 250px;
+  
+  border-radius: 8px;
+}
+
+.event-name {
+  font-size: 1.2em;
+  margin: 12px 0;
+}
+
+.view-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+

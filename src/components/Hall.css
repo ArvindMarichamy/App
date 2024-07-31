@@ -1,0 +1,52 @@
+/* ./components/Hall.css */
+.hall-list {
+    padding: 1rem;
+  }
+  
+  .hall-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .hall-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .hall-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .hall-name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .hall-description {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .book-button {
+    background-color: darkgoldenrod;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-button:hover {
+    background-color: #ff9900; /* Change to your desired hover color */
+  }
+  

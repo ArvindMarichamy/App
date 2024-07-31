@@ -1,0 +1,104 @@
+/* Admin.css */
+
+.admin-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .admin-page h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .admin-page p {
+    text-align: center;
+    color: #666;
+  }
+  
+  .add-hall-form, .hall-list {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .add-hall-form h2, .hall-list h2 {
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .add-hall-form input[type="text"],
+  .add-hall-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .add-hall-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-hall-form button:hover {
+    background-color: #218838;
+  }
+  
+  .hall-list .hall-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .hall-list .hall-card:last-child {
+    border-bottom: none;
+  }
+  
+  .hall-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .hall-name {
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .hall-description {
+    flex-grow: 2;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .delete-button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  

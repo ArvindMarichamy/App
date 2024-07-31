@@ -1,0 +1,40 @@
+/* ./components/PaymentPage.css */
+.payment-page {
+    padding: 1rem;
+  }
+  
+  .payment-page h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .payment-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .payment-page label {
+    font-weight: bold;
+  }
+  
+  .payment-page input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .payment-page button {
+    background-color: darkgoldenrod;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-page button:hover {
+    background-color: #ff9900; /* Change to your desired hover color */
+  }
+  

@@ -1,0 +1,29 @@
+/* ./components/Home.css */
+
+.home-container {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.welcome-message {
+  background-color: transparent; /* Add a semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.welcome-message h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 1.2em;
+}
