@@ -1,19 +1,20 @@
-// ./components/ProtectedRoute.js
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
 function ProtectedRoute({ element, adminOnly = false }) {
-  const { currentUser } = useAuth();
+  
+    if (adminOnly && localStorage.getItem('userRole') !== 'admin') {
+      console.log(localStorage.getItem('user'));
+      return <Navigate to="/admin-login" />;
+  
+    }
 
-  if (!currentUser) {
+  if (!localStorage.getItem('user')) {
+    // If the user is not logged in, redirect to the login page
     return <Navigate to="/login" />;
   }
 
-  if (adminOnly && !currentUser.isAdmin) {
-    return <Navigate to="/" />;
-  }
-
+  // If all checks pass, render the desired element
   return element;
 }
 

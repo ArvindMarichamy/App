@@ -1,55 +1,96 @@
 /* Signup.css */
 
 .signup {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 50px;
+  width: 300px;
+  margin: 50px auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
+  background-color: rgba(135, 207, 235, 0.208);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(1, 0, 0, 0.826);
 }
 
 .signup h2 {
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 50px;
-  color: whitesmoke;
 }
 
 .signup form {
-  display: flex;
-  flex-direction: column;
+  margin-top: 10px;
 }
 
 .signup label {
-  font-weight: 600;
-  margin-bottom: 8px;
-  align-items: center;
-  color: whitesmoke;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.signup input {
+.signup input[type="email"],
+.signup input[type="password"] {
+  width: 90%;
+  height: 10px;
+  margin-bottom: 10px;
   padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.signup button {
-  background-color: gray;
-  color:whitesmoke;
+.signup input[type="email"]:focus,
+.signup input[type="password"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.614);
+  color: #fff;
+  padding: 10px;
   border: none;
-  padding: 10px;
-  border-radius: spx;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
-.signup button:hover {
-  background-color: #0056b3;
+.signup button[type="submit"]:hover {
+  background-color: rgba(128, 128, 128, 0.785);
+}
+
+.signup .error {
+  color: #f00;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.signup p {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Effects */
+
+.signup {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.signup button[type="submit"] {
+  transition: background-color 0.3s;
+}
+
+.signup button[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+.signup input[type="email"]:focus,
+.signup input[type="password"]:focus {
+  transition: border-color black, box-shadow cubic-bezier(0.165, 0.84, 0.44, 1);
 }

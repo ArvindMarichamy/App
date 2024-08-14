@@ -1,16 +1,17 @@
 // ./components/Admin.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useHalls } from '../context/HallContext';
-import'./Admin.css'
+import './Admin.css';
 
 function Admin() {
   const { halls, addHall, deleteHall } = useHalls();
-  const navigate = useNavigate();
   const [newHall, setNewHall] = useState({
     name: '',
     description: '',
-    image: ''
+    image: '',
+    location: '',
+    price: '',
+    capacity: ''
   });
 
   const handleInputChange = (e) => {
@@ -23,7 +24,14 @@ function Admin() {
 
   const handleAddHall = () => {
     addHall(newHall);
-    setNewHall({ name: '', description: '', image: '' });
+    setNewHall({
+      name: '',
+      description: '',
+      image: '',
+      location: '',
+      price: '',
+      capacity: ''
+    });
   };
 
   const handleDeleteHall = (hallId) => {
@@ -57,16 +65,41 @@ function Admin() {
           value={newHall.image}
           onChange={handleInputChange}
         />
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={newHall.location}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="price"
+          placeholder="Price"
+          value={newHall.price}
+          onChange={handleInputChange}
+        />
+        <input
+          type="number"
+          name="capacity"
+          placeholder="Capacity"
+          value={newHall.capacity}
+          onChange={handleInputChange}
+        />
         <button onClick={handleAddHall}>Add Hall</button>
       </div>
       
-      <div className="hall-list">
         <h2>Existing Halls</h2>
-        {halls.map((hall, index) => (
-          <div key={index} className="hall-card">
+      <div className="hall-list">
+        {halls.map((hall) => (
+          <div key={hall.id} className="hall-card">
             <img src={hall.image} alt={hall.name} className="hall-image" />
             <h3 className="hall-name">{hall.name}</h3>
             <p className="hall-description">{hall.description}</p>
+            <p className="hall-location"><strong>Location:</strong> {hall.location}</p>
+            <p className="hall-capacity"><strong>Hall Capacity:</strong> {hall.capacity}</p>
+            <p className="hall-price"><strong>Price:</strong> {hall.price}</p>
+            
             <button className="delete-button" onClick={() => handleDeleteHall(hall.id)}>
               Delete
             </button>

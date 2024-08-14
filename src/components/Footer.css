@@ -6,8 +6,11 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 0.9em;
+  background-color: rgba(0, 0, 0, 0.300);
+  backdrop-filter: blur(2px);
 }
 
 footer p {
   margin: 0;
+  color: whitesmoke;
 }

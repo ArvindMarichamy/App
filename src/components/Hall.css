@@ -1,52 +1,98 @@
-/* ./components/Hall.css */
+/* Hall.css */
+
 .hall-list {
-    padding: 1rem;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.hall-list h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hall-list p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.hall-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hall-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 320px; /* Increased width */
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
-  .hall-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
+}
+
+.hall-card:hover {
+  transform: translateY(-5px);
+}
+
+.hall-image {
+  width: 100%;
+  height: 300px; /* Increased height */
+  object-fit: cover;
+}
+
+.hall-name {
+  font-size: 1.5rem;
+  margin: 15px 15px 10px; /* Reduced bottom margin */
+  color: #333;
+}
+
+.hall-description {
+  padding: 0 15px;
+  margin: 0 0 10px; /* Reduced bottom margin */
+  color: #555;
+  text-align: left;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.hall-location,
+.hall-price,
+.hall-capacity {
+  margin: 5px 15px 0; /* Reduced bottom margin */
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+}
+
+.book-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
   .hall-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
-    width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .hall-image {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    margin: 0 0 20px;
   }
-  
-  .hall-name {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-  
-  .hall-description {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .book-button {
-    background-color: darkgoldenrod;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .book-button:hover {
-    background-color: #ff9900; /* Change to your desired hover color */
-  }
-  
+}
+ 

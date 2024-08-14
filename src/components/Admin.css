@@ -1,104 +1,141 @@
 /* Admin.css */
 
 .admin-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(135, 207, 235, 0.208);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(1, 0, 0, 0.826);
+}
+
+.admin-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-page p {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.add-hall-form {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(1, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.add-hall-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-hall-form input[type="text"],
+.add-hall-form input[type="number"],
+.add-hall-form textarea {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.add-hall-form input[type="text"]:focus,
+.add-hall-form input[type="number"]:focus,
+.add-hall-form textarea:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-hall-form button {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.614);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-hall-form button:hover {
+  background-color: rgba(128, 128, 128, 0.785);
+  transform: scale(1.1);
+}
+
+.hall-list {
+  margin-top: 20px;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+}
+
+ h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hall-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hall-card img.hall-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.hall-card h3.hall-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.hall-card p {
+  margin-bottom: 10px;
+}
+
+.hall-card .delete-button {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hall-card .delete-button:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+/* Animation Effects */
+.admin-page,
+.add-hall-form,
+.hall-card {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .admin-page h1 {
-    text-align: center;
-    color: #333;
+  to {
+    opacity: 1;
   }
-  
-  .admin-page p {
-    text-align: center;
-    color: #666;
-  }
-  
-  .add-hall-form, .hall-list {
-    margin-top: 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .add-hall-form h2, .hall-list h2 {
-    margin-bottom: 20px;
-    color: #444;
-  }
-  
-  .add-hall-form input[type="text"],
-  .add-hall-form textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  
-  .add-hall-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .add-hall-form button:hover {
-    background-color: #218838;
-  }
-  
-  .hall-list .hall-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .hall-list .hall-card:last-child {
-    border-bottom: none;
-  }
-  
-  .hall-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .hall-name {
-    flex-grow: 1;
-    margin-left: 20px;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .hall-description {
-    flex-grow: 2;
-    margin-left: 20px;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .delete-button {
-    padding: 8px 12px;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .delete-button:hover {
-    background-color: #c82333;
-  }
-  
+}

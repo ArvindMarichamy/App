@@ -1,0 +1,92 @@
+/* AdminLogin.css */
+
+.admin-login {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(135, 207, 235, 0.208);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(1, 0, 0, 0.826);
+  }
+  
+  .admin-login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-login form {
+    margin-top: 10px;
+  }
+  
+  .admin-login input[type="email"],
+  .admin-login input[type="password"] {
+    width: 90%;
+    height: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  .admin-login input[type="email"]:focus,
+  .admin-login input[type="password"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-login button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.614);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .admin-login button[type="submit"]:hover {
+    background-color: rgba(128, 128, 128, 0.785);
+  }
+  
+  .admin-login .error {
+    color: #f00;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-login p {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  
+  /* Effects */
+  
+  .admin-login {
+    animation: fadeIn 1s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .admin-login button[type="submit"] {
+    transition: background-color 0.3s;
+  }
+  
+  .admin-login button[type="submit"]:hover {
+    transform: scale(1.1);
+  }
+  
+  .admin-login input[type="email"]:focus,
+  .admin-login input[type="password"]:focus {
+    transition: border-color black, box-shadow cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  

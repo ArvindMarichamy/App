@@ -4,7 +4,6 @@ import './BookingHistory.css'; // Add custom styles for the booking history page
 
 function BookingHistory() {
   const { bookingHistory } = useBooking();
-
   return (
     <div className="booking-history">
       <h1>Booking History</h1>
